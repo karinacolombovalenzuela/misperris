@@ -1,0 +1,66 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div>
+    <h1 class="titulo_contenido" >RESCATE</h1>
+    <br>
+    <h4 class="subtitulo_contenido" >ETAPA UNO</h4>
+    <br>
+    <hr class="linea">
+    <br>
+    <p class="texto_contenido">Rescatamos perros en situacion de peligro y/o abandono.Los rehabilitamos y los</p>
+    <p class="texto_contenido"> preparamos para buscarles un hogar</p>
+    <br>
+    <br>
+  <img class="rescate_logo" src="{% static 'core/img/RESCATE.jpg' %}" alt="rescate_perro">
+</div>
+    
+    <div>
+    
+        <img class="comida_logo" src="{% static 'core/img/crowfunding.jpg' %}" alt="comida">
+        <h1 class="titulo_contenido1">CROWDFUNDING</h1>
+        <br>
+        <h4 class="subtitulo_contenido1" >FINANCIAMIENTO</h4>
+        <br>
+        <hr  class="linea2">
+        <br>
+        <p class="texto_contenido1">Sigue nuestas redes sociales para informarte acerca de las diversas campañas y </p>
+        <p class="texto_contenido1">actividades que realizamos para obtener financiamiento para seguir ayudando</p>
+        <br>
+        <br>
+    
+    </div>
+    
+       </div>
+       
+       <div>
+        <button class="boton">Campañas</button>
+       </div>
+   
+       <div class="galeria"> 
+           <div  >
+            <a   data-fancybox="gallery"  title="Oso" href="{% static 'core/img/Oso.jpg' %}"><img  src="{% static 'core/img/Oso.jpg' %}" ></a>
+            <a   data-fancybox="gallery"  title="Chocolate" href="{% static 'core/img/Chocolate.jpg' %}"><img  src="{% static 'core/img/Chocolate.jpg' %}"></a>
+           <a data-fancybox="gallery"  title="Bigotes" href="{% static 'core/img/Bigotes.jpg' %}"><img class="img" src="{% static 'core/img/Bigotes.jpg' %}"></a>
+          
+           </div>
+          
+        <div >
+            
+                <a  data-fancybox="gallery"  title="Maya" href="{% static 'core/img/Maya.jpg' %}"><img src="{% static 'core/img/Maya.jpg' %}"></a>
+                <a  data-fancybox="gallery"  title="Pexel" href="{% static 'core/img/Pexel.jpg' %}"><img src="{% static 'core/img/Pexel.jpg' %}"></a>
+                <a   data-fancybox="gallery"  title="Luna" href="{% static 'core/img/Luna.jpg' %}"><img src="{% static 'core/img/Luna.jpg' %}"></a>     
+        </div>
+        <div  >
+                <a  data-fancybox="gallery"  title="Wifi" href="{% static 'core/img/Wifi.jpg' %}"><img src="{% static 'core/img/Wifi.jpg' %}"></a>
+               
+        </div>  
+  
+       </div>
+
+   
+
+{% endblock contenido %}

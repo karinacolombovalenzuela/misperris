@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienvenido a Fundación Mis Perris</title>
+    <link rel="stylesheet" href="/static/account/signup.css">
+</head>
+<body>
+        <header>
+              
+        </header>
+        
+            <div class="landing_inferior">
+        
+                <h5>Mis Perris</h5>
+                <div>
+                        <form class="contact-main form" action="" method="post" >
+                             
+                                   {% csrf_token%}
+                                   {{form.as_p}}
+                                   <input type="submit" value="Iniciar Sesión" id="BOTON">
+                    
+                        </form>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+                <h4 class="texto_footer">Desarrollo web y mobile</h4>
+            </footer>
+   
+</body>
+</html>

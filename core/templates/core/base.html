@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienvenido a Fundación Mis Perris</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/Estilos.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.js"></script>
+    <script src="{% static 'core/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'core/js/inicializacion.js' %}"></script>
+    <script src="{% static 'core/js/Valida_Rut.js' %}"></script>
+    <script src="{% static 'core/js/validacion.js' %}"></script>
+    <script src="{% static 'core/js/formato_rut.js' %}"></script>
+    <script src="{% static 'core/js/isEmail.js' %}"></script>
+    <script src="{% static 'core/js/validaNumericos.js' %}"></script> 
+    <script src="{% static 'core/js/soloLetras.js' %}"></script> 
+    <script src="{% static 'core/js/valida.js' %}"></script> 
+
+</head>
+<body>
+    <header>
+            <img class="logo" src="{% static 'core/img/logo.png' %}" alt="Logo">
+            <ul class="navegacion">
+                <li>
+                    <a href="/">
+                        <p>Inicio</p>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">Quienes somos</a>
+                </li>
+                <li>
+                    <a href="{% url 'mascotas' %}">Servicios</a>
+                </li>
+                <li>
+                    <a href="{% url 'formulario_adoptante' %}">Contactanos</a>
+                </li>
+
+                {% if request.user.is_authenticated%}
+                <li>
+                    <a href="{% url 'home' %}">Cerrar Sesión</a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="{% url 'login' %}">Iniciar Sesión</a>
+                </li>
+                {% endif %}
+            </ul>
+        </header>
+    <div class="landing">
+        <div class="slider">
+            <div >
+                <img  title="Oso" class="imagen_landing " src="{% static 'core/img/Apolo.jpg' %}" alt="Perros" >
+      
+            </div>
+            <div>
+                <img title="Tom" class="imagen_landing" src="{% static 'core/img/Tom.jpg' %}" alt="Perros">
+            </div>
+            <div>
+                   
+                <img title="Duque" class="imagen_landing" src="{% static 'core/img/Duque.jpg' %}" alt="Perros" >
+               
+            </div>
+        </div>
+
+        <div class="landing_inferior">
+            <h5 class="eslogan">+56 9 98765431</h5>
+            <h5 class="mensaje">Rescate y adopción de perros callejeros</h5>
+            <ul class="social">
+                <li>
+                    <a href="http://twitter.com" target="_blank">
+                        <img src="{% static 'core/img/social-twitter.png' %}" alt="twitter">
+                    </a>
+                </li>
+                <li>
+                    <img src="{% static 'core/img/socialfacebook.png' %}" alt="facebook">
+                </li>
+                <li>
+                    <img src="{% static 'core/img/social-inst.png' %}" alt="instagram">
+                </li>
+                <li>
+                    <img src="{% static 'core/img/socialplus.png' %}" alt="Google">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    
+  
+    <div class="contenido">
+     {% block contenido %}
+
+     {% endblock contenido %}
+
+    </div>
+ 
+    <footer>
+         <h4 class="texto_footer">Desarrollo web y mobile</h4>
+     </footer>
+
+</body>
+</html>

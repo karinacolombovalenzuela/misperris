@@ -1,0 +1,54 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+
+<div class="row section-header">
+        <div class="col-full">
+            <h2 class="subhead">Listado de Adoptantes</h2>
+
+    <div class="main-container">
+      
+        <table>
+             <thead>
+                <tr>
+                    <th>Rut</th>
+                    <th>Nombre</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Region</th>
+                    <th>Ciudad</th>
+                    <th>Vivienda</th>
+                    <th>Modificar</th>
+                    <th>Eliminar</th>
+                 </tr>
+            </thead>
+
+    {% for a in adoptante %}
+    
+            <tr>
+                <td>{{ a.rut }}</td>
+                <td>{{ a.nombre }}</td>
+                <td>{{ a.fechaNacimiento }}</td>
+                <td>{{ a.email }}</td>
+                <td>{{ a.telefono }}</td>
+                <td>{{ a.region.region }}</td>
+                <td>{{ a.ciudad.ciudad }}</td>
+                <td>{{ a.vivienda.vivienda }}</td>
+                <td><a href="{% url 'modificar_adoptante' a.id %}" target="_blank"><img src="{% static 'core/img/modificarUser.png' %}"></a></td>
+                <td><a href="{% url 'eliminar_adoptante' a.id %}" target="_blank"><img src="{% static 'core/img/deleteUser.png' %}"></a></td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+        <h4 class="textoMensaje">{{ mensaje }}</h4>
+    </div>
+    <button class="boton" onclick="location.href='/formulario_adoptante'">Agregar Adoptante</button>  
+</div>
+</div>
+
+{% endblock contenido %}

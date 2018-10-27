@@ -1,0 +1,65 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block contenido %}
+<div class="row section-header">
+        <div class="col-full">
+     <div class="contact-main">
+
+        <form action="" id="formularioFundacion" method="POST">
+        
+            {% csrf_token %}
+        <table>
+            <label for=""><h3>POSTULA AQUI</h3></label>
+            <input type="text" id="rut" size="30" name="rut"  required oninput="formato_rut(this)" placeholder="RUT">
+            <input type="text" name="nombre" id="nombre" onkeypress='return soloLetras(event)' placeholder="NOMBRE" >
+            <label for="">Fecha Nacimiento:</label>
+            <input type="date" name="dtpFechaNacimiento" id="dtpFechaNacimiento" max="2000-12-31" placeholder="DD/MM/AAAA"  >
+            <input type="email" name="email" id="email"  required oninput="isEmail(this)" placeholder="EMAIL">
+            <input type="int" name="txtTelefono" id="txtTelefono"  onkeypress='return validaNumericos(event)' placeholder="TELEFONO">
+            <label for="">Region: </label>
+            <p>
+                    <select name="cboRegion" id="cboRegion">
+                            <option value="">Seleccionar</option>
+                            {% for m in regiones %}
+                            <option value="{{ m.id }}">{{ m.region }}</option>
+                            {% endfor %}
+                    </select>
+            <p>
+                <label for="">Ciudad: </label>
+            <p>
+                    <select name="cboCiudad" id="cboCiudad">
+                            <option value="">Seleccionar</option>
+                            {% for m in ciudades %}
+                            <option value="{{ m.id }}">{{ m.ciudad }}</option>
+                            {% endfor %}
+                    </select>
+           <p>
+        <p>
+        
+                <label for="">Tipo Vivienda: </label>
+           <p>
+           <p>
+                <select name="cboVivienda" id="cboVivienda">
+                        <option value="">Seleccionar</option>
+                        {% for v in viviendas %}
+                        <option value="{{ v.id }}">{{ v.vivienda }}</option>
+                        {% endfor %}
+                </select>
+         <p>
+         <p>
+         <p>
+        <input type="submit" value="ENVIAR" name="btnGuardar" id="BOTONA">
+        
+        </table>
+        <h4 class="textoMensaje">{{ mensaje }}</h4>
+        </form>
+    </div>
+     
+    <button class="boton" onclick="location.href='/adoptantes'">Listado de Adoptantes</button>
+</div>
+</div>
+
+
+{% endblock contenido %}

@@ -1,0 +1,56 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="row section-header">
+        <div class="col-full">
+            <h2 class="subhead">Listado de Mascotas</h2>
+
+    <div class="main-container">
+      
+        <table>
+             <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                    <th>Genero</th>
+                    <th>Fecha Ingreso</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Descripcion</th>
+                    <th>Imagen</th>
+                    <th>Estado</th>
+                    <th>Modificar</th>
+                    <th>Eliminar</th>
+                 </tr>
+            </thead>
+
+    {% for a in mascota %}
+    
+            <tr>
+                <td>{{ a.nombre }}</td>
+                <td>{{ a.raza.raza }}</td>
+                <td>{{ a.genero }}</td>
+                <td>{{ a.fechaIngreso }}</td>
+                <td>{{ a.fechaNacimiento }}</td>
+                <td>{{ a.descripcion }}</td>
+                <td>{{ a.id_image }}</td>
+                <td>{{ a.tipo }}</td>
+                <td><a href="{% url 'modificar_mascota' a.id %}" target="_blank"><img src="{% static 'core/img/modificarUser.png' %}"></a></td>
+                <td><a href="{% url 'eliminar_mascota' a.id %}" target="_blank"><img src="{% static 'core/img/deleteUser.png' %}"></a></td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+        <h4 class="textoMensaje">{{ mensaje }}</h4>
+    </div>
+</div>
+<button class="boton" onclick="location.href='/formulario_mascota'">Agregar Mascota</button>
+</div>
+</div>
+
+
+
+{% endblock contenido %}

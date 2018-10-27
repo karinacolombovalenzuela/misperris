@@ -1,0 +1,61 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+{% block contenido %}
+
+<div class="contact-main">
+        <h2 class="subhead">Modificar Mascota</h2>
+<form action="" method="post"  id="formularioMascota" >
+    <!--comentario-->
+    
+    <input type="hidden" name="txtId" id="txtId" value="{{ mascota.id }}" >
+
+    {% csrf_token %}
+    <label for="">Nombre</label>
+    <input type="text" name="nombre" id="nombre" onkeypress='return soloLetras(event)' placeholder="NOMBRE" value="{{ mascota.nombre }}">
+    <label for="">Selecione Genero</label>
+    <select value="{{ mascota.genero }}">
+                <option>M</option>
+                <option>F</option>
+    </select>
+    <label for="">Fecha Ingreso:</label>
+    <input type="date" name="fechaIngreso" id="fechaIngreso"  value="{{ mascota.formato_fechaIngreso }}">
+    <label for="">Fecha Nacimiento:</label>
+    <input type="date" name="fechaNacimiento" id="fechaNacimiento"  value="{{ mascota.formato_fechaNacimiento }}">
+    <label for="">Descripcion:</label>
+    <input type="text" name="descripcion" id="descripcion"  value="{{ mascota.descripcion }}">
+    <label for="">Imagen:</label>
+    <input id="id_image" type="file" class="" name="image"  value="{{ mascota.imagen }}">
+    <label for="">Seleccione Raza:</label>
+    <select name="cboRaza" id="cboRaza">
+            <option value="">Seleccionar raza</option>
+            {% for r in raza %}
+                <option 
+                {% if r.id == mascota.raza.id %}
+                {{ 'selected' }}
+                {% endif %}
+                
+                value="{{ r.id }}">{{ r.raza }}</option>
+            {% endfor %}
+    </select>
+    <label for="">Seleccione estado:</label>
+    <select name="cboTipo" id="cboTipo">
+            <option value="">Seleccionar estado</option>
+            {% for r in tipo %}
+                <option 
+                {% if r.id == mascota.tipo.id %}
+                {{ 'selected' }}
+                {% endif %}
+                
+                value="{{ r.id }}">{{ r.tipo }}</option>
+            {% endfor %}
+    </select>
+
+    
+    <input type="submit" value="Modificar" id="BOTONA">
+    
+</form>
+</div>
+<h3>{{ mensaje }}</h3>
+
+{% endblock contenido %}

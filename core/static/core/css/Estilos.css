@@ -1,0 +1,677 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+.bx-wrapper {
+    background-color:#6DCCAA!important;
+    border:none!important;
+    box-shadow: none!important;
+}
+
+.galeria{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.galeria > div{
+    width: 100%;
+    background-color:#6DCCAA!important;
+    }
+.galeria img {
+    width: 30%;
+    margin: 10px;
+    object-fit: cover;
+    height: 30em;
+    margin-left: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+    
+    
+}
+
+.orientacion {
+    display: flex;
+    flex-direction: a;
+    }
+
+header{
+    width: 100%;
+    background-color:#84D3B6;
+}
+
+.logo{
+    width: 290px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+}
+
+.navegacion{
+
+    float: right;
+    margin-top: 20px;
+    color: white;
+  
+    
+}
+
+.navegacion li {
+    display: inline-block;
+    margin-right: 50px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 5px;
+    text-align: right;
+  
+}
+.navegacion li:hover {
+    border-radius: 20px;
+}
+
+.navegacion li a {
+    color:white;
+    font-weight: bold;
+    text-decoration :none ;
+    text-transform: uppercase;
+}
+
+.landing {
+    width: 100%;
+    height: auto;
+    background-color: #6DCCAA;
+}
+
+.slider{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 820.656px;
+}
+
+.imagen_landing{
+    margin:auto;
+    display: block;
+    width: auto;
+    height: auto;
+
+}
+
+.titulo{
+  color: black;
+
+}
+
+
+
+.landing_inferior
+{
+    display: flex;
+    justify-content: space-around;
+    background-color: #6DCCAA;
+    width: 100%;
+}
+
+.landing_inferior li
+{
+    padding-bottom: 20px;
+}
+
+
+
+.auto_landing {
+    width: 900px;
+    height: 350px;
+    margin:auto;
+    display: block;
+}
+
+.eslogan {
+    color:white;
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float: left;
+    margin-left: -100px;
+    
+}
+
+.mensaje {
+    color:white;
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float: left;
+    
+}
+
+.social {
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    width: 100px;
+}
+
+.social li {
+    display: inline-block;
+    margin-right: 10px;
+
+}
+.social li img {
+    width: 36px;
+    height: 36px;
+}
+
+.contenido {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+ 
+ }
+ 
+ .contenido > div{
+     width: 100%;
+     
+     }
+ 
+ 
+ .titulo_contenido{
+     margin-right: 30px;
+     text-align: right;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+ 
+ .subtitulo_contenido{
+     margin-right: 30px;
+     text-align: right;
+     font-family: sans-serif;;
+     color: lightslategray;
+ }
+ 
+ .texto_contenido{
+     margin-right: 30px;
+     text-align: right;
+     font-family: sans-serif;
+     color: lightslategray;
+ }
+ 
+ .rescate_logo{
+    
+ float: right;
+ margin-right: 30px;
+     width: 380px;
+     height: 180px;
+ }
+ 
+ .comida_logo{
+ 
+     width: 380px;
+     height: 180px;
+ 
+ 
+ }
+ 
+ .titulo_contenido1{
+ 
+     margin-right: 30px;
+     text-align: left;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+ 
+ .subtitulo_contenido1{
+     margin-right: 30px;
+     text-align: left;
+     font-family: sans-serif;;
+     color: lightslategray;
+ }
+ 
+ .texto_contenido1{
+     margin-right: 30px;
+     text-align: left;
+     font-family: sans-serif;
+     color: lightslategray;
+ }
+
+ .linea{
+    margin-right: 30px;
+    width: 50px;
+float: right;
+
+ }
+ 
+ .linea2{
+    margin-right: 30px;
+    float: left;
+    width: 50px;
+
+
+ }
+ 
+ 
+ 
+ footer {
+     width: 100%;
+     height: 50px;
+     background-color: 	#E6E6E6;
+ }
+
+ .boton{
+    margin: 30px;
+    text-decoration:none;
+    font-weight: 600;
+    font-size: 20px;
+    color:#000000;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:40px;
+    padding-right:40px;
+    background-color: transparent;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #000000;
+    } 
+
+    /*.galeria{
+        background-color:#6DCCAA!important;
+        border:none!important;
+        box-shadow: none!important;
+        margin: 60px;
+    }
+    
+
+    .galeria img  {
+        width: 30%;
+        height: 30%;
+      margin: 10px;
+        
+    }
+    */
+
+   
+    
+ .texto_footer{
+     font-family: sans-serif;
+ }
+
+ .contact-main form {
+    width: 500px;
+    margin: auto;
+    background: rgba(255,255,255,20);
+    background: #6DCCAA;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    border-radius: 7px;
+    
+}
+
+.contact-main H3 {
+    color:white;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+    
+}
+
+.contact-main input, textarea, select {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+
+
+ 
+
+
+.contact-main label {
+ color: white;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+#BOTON {
+    background: #6DCCAA;
+    color:white;
+    margin-top: 15px;
+    padding: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    margin: 12px 43px 24px 450px;
+}
+
+#BOTONA{
+    background: #6DCCAA;
+    color:white;
+    margin-top: 15px;
+    padding: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+
+}
+
+.te-main form {
+    margin: auto;
+    background: rgba(255,255,255,20);
+    background: #6DCCAA;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 7px;
+    
+}
+
+.te-main H3 {
+    color:white;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+    
+}
+
+.te-main input, textarea {
+    width: 35%;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-right: 3%;
+}
+
+.te-main select {
+    width: 45%;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-right: 3%;
+}
+
+
+
+
+.te-main label {
+ color: white;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+/*CODIFO CSS TABLE*/
+
+/* TITULO*/
+.subhead {
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    color: black;
+    margin-top: 30px;
+    text-align: center;
+   
+
+  }
+  
+#main-container{
+	margin: 500px;
+    width: 10px;
+  
+}
+
+.main-container table{
+
+	background-color: white;
+    margin: auto;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+
+
+
+th, td{
+
+	padding: 20px;
+
+}
+
+
+
+thead{
+
+	background-color: #6DCCAA;
+
+	border-bottom: solid 5px #0F362D;
+
+	color: white;
+
+}
+
+
+
+tr:nth-child(even){
+
+	background-color: #ddd;
+
+}
+
+
+
+tr:hover td{
+
+	background-color: #369681;
+
+	color: white;
+
+}
+
+
+.textoMensaje{
+    color: white;
+    text-transform: uppercase;
+}
+
+
+
+@media (max-width:1024px) {
+
+.galeria{
+    display: block;
+    flex-direction: row;
+}
+
+    .galeria img {
+        margin-left:10%;
+        width: 80%; 
+        margin-right: 10%;
+        
+        
+    }
+    
+    .auto_landing {
+        width: 100%;
+        height: auto;
+        
+    }
+
+    .landing_inferior{
+        columns: 3;
+        flex-direction: column;
+        
+    }
+    .eslogan {
+        float:none;
+        text-align: center;
+        }
+    .mensaje{
+        float:none;
+        text-align: center;
+
+    }
+    .social {
+        margin-left: 200px;
+        justify-content: center;
+    
+    }
+
+    header {
+        height: 280px;
+      
+    }
+
+    .navegacion {
+        float:none;
+        width: 80%;
+        margin:auto;
+
+
+   
+    }
+
+    .navegacion li {
+        width: 100%;
+        margin-top:12px;
+        text-align: center;
+
+    }
+
+    .landing {
+        height: auto;
+    }
+
+    
+    .contenido {
+        columns: 2;
+        flex-direction: column;
+
+    }
+
+    .rescate_logo{
+
+        float: none;
+        margin-right: 0;
+        }
+          
+    .contact-main form {
+        width: 370px;
+    }
+
+    .te-main form {
+        width: auto;
+    }
+
+    #BOTON {
+        margin: auto;
+        width: 100%;
+    }
+
+    .te-main select{
+        width: 100%
+    }
+
+    .te-main input, textarea {
+        width: 100%;
+       
+    }
+
+    .te-main label{
+        width: 100%
+    }
+
+    body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.25;
+      }
+      
+      table {
+        border: 1px solid #6DCCAA;;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+      }
+      
+      table caption {
+        font-size: 1.5em;
+        margin: .5em 0 .75em;
+      }
+      
+      table tr {
+        background-color:#6DCCAA;;
+        border: 1px solid #6DCCAA;;
+        padding: .35em;
+      }
+      
+      table th,
+      table td {
+        padding: .625em;
+        text-align: center;
+      }
+      
+      table th {
+        font-size: .85em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+      
+      @media screen and (max-width: 600px) {
+        table {
+          border: 0;
+        }
+      
+        table caption {
+          font-size: 1.3em;
+        }
+        
+        table thead {
+          border: none;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+        
+        table tr {
+          border-bottom: 3px solid #6DCCAA;;
+          display: block;
+          margin-bottom: .625em;
+        }
+        
+        table td {
+          border-bottom: 1px solid #6DCCAA;;
+          display: block;
+          font-size: .8em;
+          text-align: right;
+        }
+        
+        table td::before {
+          /*
+          * aria-label has no advantage, it won't be read inside a table
+          content: attr(aria-label);
+          */
+          content: attr(data-label);
+          float: left;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        
+        table td:last-child {
+          border-bottom: 0;
+        }
+    
+}
+

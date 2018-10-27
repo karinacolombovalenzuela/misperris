@@ -1,0 +1,63 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="row section-header">
+                <div class="col-full">
+<div class="te-main">
+        <div class="col-full">
+                <h2 class="subhead">Agregar Mascotas</h2>
+        <form action="" method="POST" enctype="multipart/form-data" id="formularioMascota">
+        
+            {% csrf_token %}
+            <table>
+                <input type="text" name="nombre" id="nombre" onkeypress='return soloLetras(event)' placeholder="NOMBRE" >
+                <select name="genero">
+                    <option value="">SELECCIONAR GENERO</option>
+                    <option>M</option>
+                    <option>F</option>
+                </select>
+                <br>
+                <label for="">Fecha Ingreso:</label>
+                <input type="date" name="FechaIngreso" id="FechaIngreso" max="2000-12-31" placeholder="DD/MM/AAAA"  >
+                <label for="">Fecha Nacimiento:</label>
+                <input type="date" name="FechaNacimiento" id="FechaNacimiento" max="2000-12-31" placeholder="DD/MM/AAAA"  >
+                <input type="descripcion" name="descripcion" id="descripcion"   placeholder="DESCRIPCION">
+                <label for="">Imagen:</label>
+                <input id="id_image" type="file" class="" name="image">
+                <select name="raza" id="raza">
+                        <option value="">SELECCIONAR RAZA</option>
+                        {% for r in razas %}
+                        <option value="{{ r.id }}">{{ r.raza }}</option>
+                        {% endfor %}
+                </select>
+                <select name="cboTipo" id="cboTipo">
+                        <option value="">SELECCIONAR ESTADO</option>
+                        {% for t in tipos %}
+                        <option value="{{ t.id }}">{{ t.tipo }}</option>
+                        {% endfor %}
+                </select>
+                
+                <input type="submit" value="ENVIAR" name="btnGuardar" id="BOTON">
+                <h4 class="textoMensaje">{{ mensaje }}</h4>
+        </table>
+        <h4 class="textoMensaje">{{ mensaje }}</h4>
+        </form>
+    </div>
+   
+    <button class="boton" onclick="location.href='/mascotas'">Listado de Mascotas</button>
+</div>
+</div>
+</div>      
+
+        
+        
+
+
+
+          
+
+
+{% endblock contenido %}

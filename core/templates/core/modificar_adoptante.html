@@ -1,0 +1,72 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+{% block contenido %}
+
+<div class="contact-main">
+        <h2 class="subhead">Modificar adoptante</h2>
+<form action="" method="post" id="formularioFundacion">
+    <!--comentario-->
+    
+    <input type="hidden" name="txtId" id="txtId" value="{{ adoptante.id }}" >
+
+    {% csrf_token %}
+    <table>
+    <label for="">Nombre</label>
+    <input type="text" name="nombre" id="nombre" onkeypress='return soloLetras(event)' placeholder="NOMBRE" value="{{ adoptante.nombre }}">
+    <label for="">Fecha Nacimiento:</label>
+    <input type="date" name="dtpFechaNacimiento" id="dtpFechaNacimiento" max="2000-12-31" placeholder="DD/MM/AAAA" value="{{ adoptante.formato_fechaNacimiento }}">
+    <input type="email" name="email" id="email"  required oninput="isEmail(this)" placeholder="EMAIL" value="{{ adoptante.email }}">
+    <input type="int" name="txtTelefono" id="txtTelefono"   onkeypress='return validaNumericos(event)' placeholder="TELEFONO" value="{{ adoptante.telefono }}">
+    <label for="">Region</label>
+    <select name="cboRegion" id="cboRegion">
+        <option value="">Seleccionar Region</option>
+        {% for r in region %}
+            <option 
+
+            {% if r.id == adoptante.region.id %}
+            {{ 'selected' }}
+            {% endif %}
+            
+            value="{{ r.id }}">{{ r.region }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="">Ciudad</label>
+    <select name="cboCiudad" id="cboCiudad">
+        <option value="">Seleccionar Ciudad</option>
+        {% for c in ciudad %}
+            <option 
+
+            {% if c.id == adoptante.ciudad.id %}
+            {{ 'selected' }}
+            {% endif %}
+            
+            value="{{ c.id }}">{{ c.region }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="">Vivienda</label>
+    <select name="cboVivienda" id="cboVivienda">
+        <option value="">Seleccionar Vivienda</option>
+        {% for v in vivienda %}
+            <option 
+
+            {% if v.id == adoptante.vivienda.id %}
+            {{ 'selected' }}
+            {% endif %}
+            
+            value="{{ v.id }}">{{ v.vivienda }}</option>
+        {% endfor %}
+    </select>
+  
+    <br>
+    <input type="submit" value="Modificar" id="BOTONA">
+
+</form>
+</table>
+<h4 class="textoMensaje">{{ mensaje }}</h4>
+</form>
+</div>
+
+{% endblock contenido %}
